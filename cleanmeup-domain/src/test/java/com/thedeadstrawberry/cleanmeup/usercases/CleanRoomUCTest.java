@@ -1,4 +1,4 @@
-package com.thedeadstrawberry.cleanmeup;
+package com.thedeadstrawberry.cleanmeup.usercases;
 
 import com.thedeadstrawberry.cleanmeup.room.*;
 import com.thedeadstrawberry.cleanmeup.user.*;
@@ -9,7 +9,7 @@ import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsInstanceOf.instanceOf;
 import static org.junit.Assert.assertThat;
 
-public class CleanRoomUCTest {
+public class CleanRoomUCTest extends UserDoesNotExistException {
 
     private CleanRoomUC cleanRoomUC;
     private RuntimeException expectedException;

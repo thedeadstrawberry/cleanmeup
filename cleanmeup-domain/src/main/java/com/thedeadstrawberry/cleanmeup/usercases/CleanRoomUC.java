@@ -1,4 +1,4 @@
-package com.thedeadstrawberry.cleanmeup;
+package com.thedeadstrawberry.cleanmeup.usercases;
 
 import com.thedeadstrawberry.cleanmeup.room.Room;
 import com.thedeadstrawberry.cleanmeup.room.RoomRepository;

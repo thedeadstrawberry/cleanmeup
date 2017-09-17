@@ -4,9 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.thedeadstrawberry</groupId>
-    <artifactId>cleanmeup</artifactId>
+    <groupId>com.thedeadstrawberry.cleanmeup</groupId>
+    <artifactId>cleanmeup-parent</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>cleanmeup-launcher</module>
+        <module>cleanmeup-domain</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
