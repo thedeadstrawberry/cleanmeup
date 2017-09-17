@@ -1,4 +1,9 @@
-package com.thedeadstrawberry.cleanmeup.room;
+package com.thedeadstrawberry.cleanmeup;
+
+import com.thedeadstrawberry.cleanmeup.room.Room;
+import com.thedeadstrawberry.cleanmeup.room.RoomRepository;
+import com.thedeadstrawberry.cleanmeup.user.User;
+import com.thedeadstrawberry.cleanmeup.user.UserRepository;
 
 public class CleanRoomUC {
     private final RoomRepository roomRepository;
@@ -15,7 +20,10 @@ public class CleanRoomUC {
 
     public void clean() {
         Room room = roomRepository.findRoom(roomId);
-        userRepository.findUser(username);
-        room.clean();
+        User user = userRepository.findUser(username);
+        room.clean(username);
+        user.awardPoints();
+        roomRepository.saveRoom(room);
+        userRepository.saveUser(user);
     }
 }
