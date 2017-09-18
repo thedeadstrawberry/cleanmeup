@@ -8,6 +8,7 @@ import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsInstanceOf.instanceOf;
 import static org.junit.Assert.assertThat;
+import static org.junit.Assert.fail;
 
 public class CleanRoomUCTest extends UserDoesNotExistException {
 
@@ -40,6 +41,7 @@ public class CleanRoomUCTest extends UserDoesNotExistException {
     private void whenTryToCleanRoom() {
         try {
             whenCleanRoom();
+            fail("Exception should have been thrown");
         } catch (RuntimeException e) {
             expectedException = e;
         }

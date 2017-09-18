@@ -18,6 +18,7 @@
     <modules>
         <module>cleanmeup-launcher</module>
         <module>cleanmeup-domain</module>
+        <module>cleanmeup-persistance-mongodb</module>
     </modules>
 
     <properties>
@@ -31,6 +32,21 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>com.thedeadstrawberry.cleanmeup</groupId>
+                <artifactId>cleanmeup-domain</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.thedeadstrawberry.cleanmeup</groupId>
+                <artifactId>cleanmeup-launcher</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.thedeadstrawberry.cleanmeup</groupId>
+                <artifactId>cleanmeup-persistance-mongodb</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter</artifactId>
@@ -65,6 +81,11 @@
                 <groupId>de.codecentric</groupId>
                 <artifactId>spring-boot-admin-starter-client</artifactId>
                 <version>${de.codecentric.admin.client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-mongodb</artifactId>
+                <version>${org.springframework.boot.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.springfox</groupId>
