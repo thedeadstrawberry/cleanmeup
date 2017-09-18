@@ -26,6 +26,7 @@
         <junit.version>4.12</junit.version>
         <org.springframework.boot.version>1.4.2.RELEASE</org.springframework.boot.version>
         <de.codecentric.admin.client.version>1.5.4</de.codecentric.admin.client.version>
+        <io.springfox.version>2.5.0</io.springfox.version>
     </properties>
 
     <dependencyManagement>
@@ -66,6 +67,16 @@
                 <version>${de.codecentric.admin.client.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${io.springfox.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${io.springfox.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>${junit.version}</version>
@@ -90,6 +101,13 @@
                 <configuration>
                     <mainClass>com.thedeadstrawberry.cleanmeup.Application</mainClass>
                 </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>build-info</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
